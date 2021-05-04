@@ -1,0 +1,43 @@
+<html>
+<head>
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+
+    <script src="\js\login.js"></script>
+    <link rel="stylesheet" type="text/css" href="\css\login.css">
+</head>
+    <body>
+    
+        <h1 class="heading">
+            PandaCore Login
+        </h1>
+        <div class="input"> 
+        <input type="email" id="email" name="email" placeholder="email">
+        <input type="password" id="pass" name="pass" placeholder="password"><br>
+        </div>
+    <div id="login" class="buttons">
+        <button onClick="signup()"> sign up </button>
+        <button onClick="signin()"> sign in </button>
+        <button onClick="signout()"> sign out </button>
+        <button onclick="forgotPassword()"> Forgot Password </button>
+    </div>
+    <div class="redpanda">
+         <img src="/img/RedPanders.png" alt="panda" width="150" height="200" > 
+    </div>
+   
+    
+
+
+
+
+   
+    
+    
+</body>
+</html>

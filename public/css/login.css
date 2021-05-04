@@ -1,0 +1,47 @@
+div.buttons {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+.heading{
+    margin: 0;
+    position: absolute;
+    top:40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+} 
+.input {
+    margin: 0;
+    position: absolute;
+    top:45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+div.redpanda {
+    
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-direction: reverse;  
+
+    margin: 0;
+    position: absolute;
+    top:45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+  }
+  
+@keyframes example {
+    0%   {left:400px; top:100px;}
+  25%  {left:1500px; top:100px;}
+  50%  {left:1500px; top:600px;}
+  75%  {left:400px; top:600px;}
+  100% {left:400px; top:100px;}
+}

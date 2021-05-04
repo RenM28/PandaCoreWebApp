@@ -1,0 +1,109 @@
+
+<head>	
+	<!-- Style Sheet -->
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+	
+	<script src="/js/genCalendar.js"></script>
+	<script src="/js/addEvent.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+
+
+	<!-- Google's jquery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+
+	{{!-- Implements for calendar dropdown --}}
+		<!--  jQuery -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+		<!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+		<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+		<!-- Bootstrap Date-Picker Plugin -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+	{{!--  --}}
+
+
+	{{!-- <script src="/js/configureFirebase.js"></script> --}}
+</head>
+
+<body>
+	<div class="calendar" id="calendar">
+		<div class="calendar-btn month-btn" onclick="$('#months').toggle('fast')">
+			<span id="curMonth"></span>
+			<div id="months" class="months dropdown"></div>
+		</div>
+
+
+
+		{{!-- Adding event --}}
+			<body onload="firebaseInit()"> 
+
+			<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script> 
+
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>jQuery UI Datepicker - Default functionality</title>
+			<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+			<link rel="stylesheet" href="/resources/demos/style.css">
+			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+			<script>
+			$( function() {
+				$( "#datepicker" ).datepicker();
+			} );
+			</script>		
+		{{!--  --}}
+
+
+
+		<div class="calendar-btn view-swap-btn" onclick="$('#views').toggle('fast')">
+			<span id="curView"></span>
+			<div id="views" class="views dropdown"></div>
+		</div>
+		
+		<div class="calendar-btn year-btn" onclick="$('#years').toggle('fast')">
+			<span id="curYear"></span>
+			<div id="years" class="years dropdown"></div>
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="calendar-dates">
+			<div class="days">
+				<div class="day label">Sunday</div>
+				<div class="day label">Monday</div>
+				<div class="day label">Tuesday</div>
+				<div class="day label">Wednesday</div>
+				<div class="day label">Thursday</div>
+				<div class="day label">Friday</div>
+				<div class="day label">Saturday</div>
+				<div class="clear"></div>
+			</div>
+
+        <div id="calendarDays" class="days"></div>
+		</div>
+		
+		<center>
+			<h3> Add Event to Calendar: </h3>
+			<br>
+			<p>
+				<b>Date:</b> <input type="text" id="datepicker">
+				<b>Title:</b> <input type="text" id="title">
+				<b>Description:</b> <input type="text" id="event">
+			</p>
+			<br>
+			<div class="calendar-btn view-swap-btn" onClick="addEvent()">Add Event</div>
+			<br><br>
+		</center>
+	</div>
+	
+	
+</body>

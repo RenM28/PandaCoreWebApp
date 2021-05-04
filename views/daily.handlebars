@@ -1,0 +1,66 @@
+<head>	
+	<!-- Style Sheet -->
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+	
+	<script src="/js/genCalendar.js"></script>
+	<script src="/js/getEvent.js"></script>
+	<script src="/js/addEvent.js"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js%22%3E"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js%22%3E"></script>
+
+	<!-- Google's jquery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+</head>
+
+	{{!-- Adding event --}}
+		<!-- <body onload="firebaseInit()"> -->
+
+		<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script> 
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>jQuery UI Datepicker - Default functionality</title>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="/resources/demos/style.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+		$( function() {
+			$( "#datepicker" ).datepicker();
+		} );
+		</script>			
+		{{!--  --}}
+
+<body>
+	<div class="calendar" id="calendar">
+		<div class="calendar-btn month-btn" onclick="$('#months').toggle('fast')">
+			<span id="curMonth"></span>
+			<div id="months" class="months dropdown"></div>
+		</div>
+		
+		<div class="calendar-btn view-swap-btn" onclick="$('#views').toggle('fast')">
+			<span id="curView"></span>
+			<div id="views" class="views dropdown"></div>
+		</div>
+		
+		<div class="calendar-btn year-btn" onclick="$('#years').toggle('fast')">
+			<span id="curYear"></span>
+			<div id="years" class="years dropdown"></div>
+		</div>
+
+		<div class="clear"></div>
+
+		<div id="dailyHeader" class="header">Events</div>
+		<div id="todaysDate" class="header">00/00/00</div>
+		<div id="holder" class="eventHolder"></div>
+	</div>
+	</div>	
+</body>
